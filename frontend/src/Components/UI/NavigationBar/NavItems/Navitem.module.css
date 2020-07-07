@@ -1,0 +1,63 @@
+/* .navItem {
+    margin:0;
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    list-style: none;
+}
+
+.navItem a{
+    padding:0px 40px 8px;
+    text-decoration: none;
+    box-sizing: border-box;
+    display:block;
+    border-bottom: 5px solid transparent;
+}
+
+.navItem a:hover,
+.navItem a:active,
+.navItem a.active{
+    border-bottom: 5px solid white;
+} */
+
+/* Common button styles */
+.button {    
+    float: left;
+    min-height:35px;
+	min-width: 130px;
+	max-width: 250px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+    border: none;
+    outline: none;
+	background: none;
+	vertical-align: middle;
+	position: relative;
+    z-index: 1;
+}
+.button:hover{
+    border-bottom: 2px solid white;
+}
+
+.button a > span {
+    vertical-align: middle;
+
+}
+
+.buttonTextUpper a {
+	letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:grey;
+
+}
+
+.buttonSizeS {
+	font-size: 14px;
+}
+
+.buttonTextThick {
+	font-weight: 600;
+}
+

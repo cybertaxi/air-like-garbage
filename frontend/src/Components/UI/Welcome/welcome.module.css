@@ -1,0 +1,127 @@
+.frame{
+    display:flex;
+    flex-flow: column;
+    
+    padding:var(--frame-padding);
+}
+
+.section{
+    padding: 5rem 0;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.section img{
+    width: calc(45vw + 1em);
+    height: auto;
+}
+
+.heading{
+    font-family: var(--title-font-style);
+    font-size: var(--title-font-size);
+    padding: var(--frame-padding);
+}
+
+.heading::before{
+    content: "Air Like Garbage Leh.";
+    background-color: #eec5c6;
+}
+
+.heading::after{
+    display:block;
+    content: "Pst!.... scroll down";
+    font-family: var(--text);
+    font-weight:300;
+    font-size: calc(0.1vw + 0.9rem);
+    
+}
+
+.main{
+    box-sizing: border-box;
+    font-family: var(--text);
+    font-size: var(--text-size);
+    flex-grow: 1;
+}
+
+.enter a{
+    display:block;
+    box-sizing: border-box;
+    text-align: center;
+    font-size:calc(2vw + 0.9rem);
+    color: black;
+    padding: 0 0 1rem;
+}
+
+.enter a:hover{
+    color: grey;
+    transition: ease 0.3s;
+}
+
+.main a{
+    font-size: calc(0.3vw + 0.9em);
+    text-decoration:underline;
+    color:black;
+}
+
+.main a:hover{
+    color:grey;
+    transition: ease 0.3s;
+}
+
+.disclaimer{
+    font-weight: lighter; 
+    font-size: calc(0.3vw + 0.5em);
+    text-align: justify;
+}
+
+/* Mobile View */
+@media screen and (max-width:550px){
+    .frame{
+        display:flex;
+        flex-flow: column;
+        padding: var(--mobile-padding);
+    }
+    .section, .enter{
+        padding: 1rem;
+        align-items:center;
+        justify-content: left;
+    }
+
+    .section img{
+        width: calc(15vw + 2em);
+        height: auto;
+    }
+
+    .heading{
+        font-family: var(--title-font-style);
+        font-size: var(--mobile-title-font-size);
+        background-color:white;
+    }
+
+    .main{
+        text-align: justify;
+    }
+
+    .enter a{
+        text-align: center;
+        color: black;
+    }
+}
+
+/* Mobile View */
+@media screen and (min-height:500px) and (max-width:1300px){
+    .heading::after{
+        display:none;
+    }
+}
+
+/* set like this if Screen is too small*/
+@media (max-width:350px){
+    .frame{
+        display:flex;
+        flex-flow: column;
+        width: 370px;
+        padding: var(--mobile-padding);
+    }
+}

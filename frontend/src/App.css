@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Ramabhadra');
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+:root{
+    --title-font-style: 'Ramabhadra', sans-serif;
+    --title-font-size: calc(7vw + 1em);
+    --mobile-title-font-size: calc(5vw + 1em);
+
+    --subtitle-size: calc(1vw + 1em);
+    --subtitle: 'Quicksand', sans-serif;
+
+    --text-size: calc(0.3vw + 0.9em);
+    --text: 'Nunito', sans-serif;
+
+    --frame-padding: 0 3rem;
+    --mobile-padding: 0 1rem ;
+}
+
 .App {
   /* text-align: center; */
   width:100%;
