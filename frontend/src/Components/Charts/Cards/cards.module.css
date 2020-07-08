@@ -1,0 +1,40 @@
+.Container{
+    justify-content: space-evenly;
+    padding:1rem 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px , 1fr));
+}
+
+.Cards{
+     /* width:15vw; */
+     /* height:15vh; */
+     border-radius:5px;
+     border: 1px solid rgb(190, 190, 190);
+     border-bottom: 10px solid #e53170;
+     box-sizing: border-box;
+     display:flex;
+     padding:10px;
+     flex-flow: column;
+     text-align: center;
+}
+
+.reading{
+    margin:0;
+    font-size: var(--subtitle-size);
+    font-family: var(--title-font-style);
+
+}
+
+.name{
+    font-size: var(--text-size);
+}
+
+.CardsTitle{
+    padding:1rem 0 0 0;
+    text-align: center;
+    display:block;
+    font-family: var(--title-font-style);
+    font-size: var(--subtitle-size);
+}
+

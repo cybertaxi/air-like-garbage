@@ -13,8 +13,8 @@ const Navbar = (props) => {
                         {/* <NavigationItem link="/" active>
                             Home
                         </NavigationItem>
-                        <NavigationItem link="/main" active>Crew</NavigationItem>
-                        <NavigationItem link="/main" active>Ships</NavigationItem> */}
+                        <NavigationItem link="/psi" active>PSI</NavigationItem>
+                        <NavigationItem link="/co2" active>CO2</NavigationItem> */}
             </nav>
         </React.Fragment>
     );
