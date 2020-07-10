@@ -2,16 +2,12 @@ import React, {useState} from 'react';
 import ApexChart from 'react-apexcharts';
 import moment from 'moment';
 import _ from 'lodash';
-
-
-
 import '../../../App.css';
-// import classes from './Popchart.module.css';
+import classes from './Popchart.module.css';
 
 
  const SyncCharts = (props) => {
-   
-    const [data, setData] = useState({ 
+    const [data] = useState({ 
       series: [
           {
             name: "North",
@@ -41,59 +37,70 @@ import '../../../App.css';
         chart: {
           height: 350,
           type: 'line',
-          dropShadow: {
-            enabled: true,
-            color: '#000',
-            top: 18,
-            left: 7,
-            blur: 10,
-            opacity: 0.2
-          },
           toolbar: {
             show: false
           }
         },
-        colors: ['#77B6EA', '#545454', 'salmon', 'red', 'navajowhite'],
+        colors: ['#32CD32', '#3da9fc', '#ff8c69', '#FF0000', '#FFDEAD'],
         dataLabels: {
-          enabled: true,
+          enabled: false,
+          background:{
+            enabled:false,
+          }
         },
         stroke: {
+          width: 2,
           curve: 'smooth'
         },
         title: {
-          text: 'PM 2.5 Index',
-          align: 'left'
+          text: 'PM2.5 on '+ moment(_.get(props.data, ['items','0','timestamp']).substring(0,10)).format('LL'),
+          align: 'left',
+          // style:{
+          //   fontSize: '0.5rem'
+          // }
         },
         grid: {
           borderColor: '#e7e7e7',
           row: {
-            // colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
             opacity: 0.5
           },
         },
         markers: {
-          size: 1
+          size: 0
         },
         xaxis: {
           //timestamp
           categories: _.get(props.data, ['items']).map(items=>moment(items.timestamp).format('HH:mm')),
           title: {
             text: 'Hourly Timestamp'
-          }
+          },
+          crosshairs:{
+            show:true,
+            position: 'back',
+            stroke:{
+              color:'black',
+              width:1,
+            }
+          },
         },
         yaxis: {
-          // title: {
-          //   text: '[todayDate]'
-          // },
           min: 0,
-          max: 20
+          max: 50,
+        },
+        tooltip:{
+          enabled:true,
+          x:{ show:true },
+          y:{
+            formatter: undefined,
+            title: {
+                formatter: (seriesName) => seriesName,
+            },
+          },
+          items:{ display:'flex' },
         },
         legend: {
           position: 'top',
           horizontalAlign: 'right',
-          floating: true,
-          offsetY: -25,
-          offsetX: -5
         }
       },
     }
@@ -102,7 +109,7 @@ import '../../../App.css';
 
       return (
         <div id="chart">
-          <ApexChart options={data.options} series={data.series} type="line" height={350} />
+          <ApexChart className={classes.container} options={data.options} series={data.series} type="line" height={350} />
         </div>
       );
 }

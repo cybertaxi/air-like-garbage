@@ -23,3 +23,31 @@
   height:100%;
 }
 
+html{
+  overflow:overlay;
+}
+
+html::-webkit-scrollbar{
+  width:0.7rem;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: #555555;
+  border-radius: 1rem;
+}
+
+
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    background: #111;
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  img,
+  video {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+ */ 

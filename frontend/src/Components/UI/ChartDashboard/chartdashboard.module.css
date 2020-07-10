@@ -1,0 +1,61 @@
+.container{
+    padding:1rem 0;
+    display:grid;
+    grid-gap:0.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "A A B C"
+        "A A D E"
+        "F G J J"
+        "H I J J"
+        "K K L L";
+}
+
+.container div{
+    transition: ease 0.3s;
+}
+
+.container div:hover{
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    transition: ease 0.3s;
+}
+
+.areaA{
+    grid-area:A;
+}
+.areaB{
+    grid-area:B;
+}
+.areaC{
+    grid-area:C;
+}
+.areaD{
+    grid-area:D;
+}
+.areaE{
+    grid-area:E;
+}
+.areaF{
+    grid-area:F;
+}
+.areaG{
+    grid-area:G;
+}
+.areaH{
+    grid-area:H;
+}
+.areaI{
+    grid-area:I;
+}
+.areaJ{
+    grid-area:J;
+}
+.areaK{
+    grid-area:K;
+}
+.areaL{
+    grid-area:L;
+}

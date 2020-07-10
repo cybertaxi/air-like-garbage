@@ -3,6 +3,9 @@ import React, { useState, useEffect} from 'react';
 import moment from 'moment';
 import _ from 'lodash';
 import PopCharts from './PopCharts/PopChart';
+// import ChartDashboard from './';
+import ChartDashboard from './../UI/ChartDashboard/Chartdashboard';
+import EntryField from '../UI/Entry/Entry';
 // import CountUp from 'react-countup';
 import Cards from './Cards/Cards';
 import api from '../../axios/axios';
@@ -43,12 +46,15 @@ const AdvanceChart = (props)=>{
           });})
       }
      const Pm25ToCards = !_.isEmpty(data.pm25) ? <Cards data ={data.pm25} title='PM 2.5 hourly Index @ '/> :  null
-     const PM25HourltoCards = !_.isEmpty(data.pm25_24hr) ? <PopCharts data ={data.pm25_24hr} /> :  null
+     const PM25HourlytoCards = !_.isEmpty(data.pm25_24hr) ? <PopCharts data ={data.pm25_24hr} /> :  null
+     const PSIHourlytoCards = !_.isEmpty(data.psi) ? <ChartDashboard data ={data.psi} /> :  null
     
      return (
        <React.Fragment>
+           {/* <EntryField /> */}
           {Pm25ToCards}
-          {PM25HourltoCards}
+          {PM25HourlytoCards}
+          {PSIHourlytoCards}
        </React.Fragment>)
 }
 

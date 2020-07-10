@@ -1,22 +1,23 @@
-.chartContainer{
+/* .chartContainer{
     margin: 70px auto;
     overflow:hidden;
     width:80%;
     text-align: center;
     font-family:var(--text);
-}
+} */
 
-@media screen and (max-width:600px){
+/* @media screen and (max-width:600px){
     .CardContainer{
         column-count: 3;
         column-span: all;
     }
 
-}
+} */
 
 /* sett at this */
-@media (max-width:370px){
+/* @media (max-width:370px){
     .CardContainer{
         display:none;
     }
-}
+} */
+

@@ -1,0 +1,30 @@
+.field{
+    --text-color: red;
+
+}
+
+.field{
+    width:100%;
+    position:relative;
+    
+    border-bottom: 2px dashed var(--text-color);
+    margin: 4rem auto 1rem;
+}
+
+.label{
+    color:var(--text-color);
+    font-size: 1.2rem;
+}
+
+input:valid{
+    color:green;
+}
+
+input:invalid{
+    color:orangered;
+}
+
+/* .field input:required:focus:valid{
+    background:black;
+} */
+
